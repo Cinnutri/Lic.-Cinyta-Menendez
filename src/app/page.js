@@ -8,11 +8,23 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div>
-      <Header />
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Testimonials />
+      </div>
+      <div>
+        <Pricing />
+      </div>
+      <div>
+        <Footer />
+      </div>
+      {/*       
       <Testimonials />
       <Pricing />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
