@@ -8,7 +8,7 @@ const Testimonials = () => {
   const testimonialData = [
     {
       image: TestimonialImg01,
-      category: "startups",
+      category: "HOLA",
       title: "Lyft launching cross-platform service this week",
       description:
         "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
@@ -16,15 +16,17 @@ const Testimonials = () => {
     // Aquí puedes agregar más datos para otras cartas
     {
       image: TestimonialImg02,
-      category: "CATEGORÍA",
-      title: "TÍTULO",
-      description: "DESCRIPCIÓN",
+      category: "SOY ",
+      title: "EL PITO DEL PANCHO",
+      description:
+        "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
     },
     {
       image: TestimonialImg03,
-      category: "CATEGORÍA",
-      title: "TÍTULO",
-      description: "DESCRIPCIÓN",
+      category: "NANO",
+      title: "EL CULO DEL EZE",
+      description:
+        "Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story",
     },
   ];
   return <TestimonialsSlider testimonialData={testimonialData} />;

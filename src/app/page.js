@@ -7,24 +7,12 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <div>
-        <Header />
-      </div>
-      <div>
-        <Testimonials />
-      </div>
-      <div>
-        <Pricing />
-      </div>
-      <div>
-        <Footer />
-      </div>
-      {/*       
+    <>
+      <Header />
       <Testimonials />
       <Pricing />
       <Contact />
-      <Footer /> */}
-    </div>
+      <Footer />
+    </>
   );
 }

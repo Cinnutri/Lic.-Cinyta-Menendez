@@ -9,7 +9,6 @@ import {
 import Image from "next/image";
 
 const TestimonialCard = ({ testimonialData }) => {
-  console.log(testimonialData);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -23,13 +22,14 @@ const TestimonialCard = ({ testimonialData }) => {
       prevIndex === 0 ? testimonialData.length - 1 : prevIndex - 1
     );
   };
+
   return (
-    <div className=" w-full h-full flex items-center justify-center">
-      <div className="overflow-hidden w-full max-w-[48rem] ">
+    <div className="flex justify-center">
+      <div className="overflow-hidden w-full max-w-[48rem] relative h-64">
         {testimonialData.map((testimonial, index) => (
           <div
             key={index}
-            className={`absolute left-0 w-full transform ${
+            className={`absolute transform ${
               index === currentIndex ? "translate-x-0" : "translate-x-full"
             } transition-transform duration-300`}
           >
@@ -42,7 +42,7 @@ const TestimonialCard = ({ testimonialData }) => {
                 <Image
                   src={testimonial.image}
                   alt="card-image"
-                  className="h-full w-full object-cover"
+                  className="h-48 w-full object-cover"
                 />
               </CardHeader>
               <CardBody>
@@ -82,21 +82,11 @@ const TestimonialCard = ({ testimonialData }) => {
             </Card>
           </div>
         ))}
-        <div className="w-full">
-          <button
-            className="absolute inset-y-0 left-0 bottom-0 flex items-center justify-center w-12 bg-gray-200 bg-opacity-50 hover:bg-opacity-75"
-            onClick={handlePrev}
-            style={{ top: "50%" }}
-          >
-            {"<"}
-          </button>
-          <button
-            className="absolute inset-y-0 right-0 bottom-0 flex items-center justify-center w-12 bg-gray-200 bg-opacity-50 hover:bg-opacity-75"
-            onClick={handleNext}
-            style={{ top: "50%" }}
-          >
-            {">"}
-          </button>
+        <div className="absolute inset-y-0 left-0 bottom-0 flex items-center justify-center w-12 bg-gray-200 bg-opacity-50 hover:bg-opacity-75 transition duration-300 cursor-pointer">
+          <button onClick={handlePrev}>&lt;</button>
+        </div>
+        <div className="absolute inset-y-0 right-0 bottom-0 flex items-center justify-center w-12 bg-gray-200 bg-opacity-50 hover:bg-opacity-75 transition duration-300 cursor-pointer">
+          <button onClick={handleNext}>&gt;</button>
         </div>
       </div>
     </div>
