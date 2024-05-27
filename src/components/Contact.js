@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (name && email && subject && message) {
+      emailjs
+        .sendForm("service_2hdf47b", "template_2shs838", form.current, {
+          publicKey: "KA2Rfe1yb8oUSDlae",
+        })
+        .then(
+          () => {
+            toast.success("Formulario enviado con éxito"); // Toast de éxito
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    } else {
+      toast.error("Completa todos los campos.");
+    }
+  };
   return (
-    <div class="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto max-w-4xl bg-white text-[#333] font-[sans-serif]">
+    <div class="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto max-w-4xl bg-white text-[#333] font-[sans-serif] p-5 shadow-custom">
       <div>
         <h1 class="text-3xl font-extrabold">Let's Talk</h1>
         <p class="text-sm text-gray-400 mt-3">
@@ -85,34 +118,47 @@ const Contact = () => {
           </ul>
         </div>
       </div>
-      <form class="ml-auo space-y-4">
+      <form ref={form} onSubmit={sendEmail} className="ml-auo space-y-4">
         <input
           type="text"
+          name="user_name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder="Name"
-          class="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
+          className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
         />
         <input
           type="email"
+          name="user_email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
-          class="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
+          className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
         />
         <input
           type="text"
+          name="user_subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
           placeholder="Subject"
-          class="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
+          className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
         />
         <textarea
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           placeholder="Message"
           rows="6"
-          class="w-full rounded-md px-4 bg-gray-100 text-sm pt-3 outline-[green]"
+          className="w-full rounded-md px-4 bg-gray-100 text-sm pt-3 outline-[green]"
         ></textarea>
         <button
-          type="button"
-          class="text-white bg-[green] hover:bg-green-600 font-semibold rounded-md text-sm px-4 py-3 w-full"
+          type="submit"
+          className="text-white bg-[green] hover:bg-green-600 font-semibold rounded-md text-sm px-4 py-3 w-full"
         >
           Send
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
