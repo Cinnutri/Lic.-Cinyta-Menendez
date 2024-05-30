@@ -7,7 +7,9 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import FirstPricing from "../../public/assets/pricing/retofenix.jpg";
+import FirstPricing from "../../public/assets/pricing/90dias.png";
+import SecondPricing from "../../public/assets/pricing/30D.png";
+import ThirdPricing from "../../public/assets/pricing/VEGETARIANO.png";
 import Image from "next/image";
 
 const Pricing = () => {
@@ -79,7 +81,7 @@ const Pricing = () => {
       {/* Pricing Card 2 */}
       <Card className="w-full max-w-[26rem]  flex flex-col">
         <CardHeader floated={false} color="blue-gray">
-          <Image src={FirstPricing} alt="Another Program" />
+          <Image src={SecondPricing} alt="Another Program" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
         </CardHeader>
         <CardBody className="flex-grow">
@@ -134,7 +136,7 @@ const Pricing = () => {
       {/* Pricing Card 3 */}
       <Card className="w-full max-w-[26rem] flex flex-col">
         <CardHeader floated={false} color="blue-gray">
-          <Image src={FirstPricing} alt="Another Program" />
+          <Image src={ThirdPricing} alt="Another Program" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
         </CardHeader>
         <CardBody className="flex-grow">
