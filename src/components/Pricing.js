@@ -280,14 +280,14 @@ const Pricing = () => {
                     <li>Técnicas mindset y psicología del cambio</li>
                   </ul>
                 </div>
+                <div className="flex justify-center mt-4">
+                  <Image
+                    src={image30dias}
+                    alt="Another Program"
+                    className="rounded-lg shadow-lg w-[400px]"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center mt-4">
-              <Image
-                src={image30dias}
-                alt="Another Program"
-                className="rounded-lg shadow-lg w-[400px]"
-              />
             </div>
             <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal1}>
@@ -374,14 +374,14 @@ const Pricing = () => {
                     <li>Técnicas mindset y psicología del cambio</li>
                   </ul>
                 </div>
+                <div className="flex justify-center mt-4">
+                  <Image
+                    src={image30dias}
+                    alt="Another Program"
+                    className="rounded-lg shadow-lg w-[400px]"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center mt-4">
-              <Image
-                src={image30dias}
-                alt="Another Program"
-                className="rounded-lg shadow-lg w-[400px]"
-              />
             </div>
             <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal2}>
@@ -461,14 +461,14 @@ const Pricing = () => {
                     <li>Recetas</li>
                   </ul>
                 </div>
+                <div className="flex justify-center mt-4">
+                  <Image
+                    src={plateVeggie}
+                    alt="Another Program"
+                    className="rounded-lg shadow-lg w-[400px]"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center mt-4">
-              <Image
-                src={plateVeggie}
-                alt="Another Program"
-                className="rounded-lg shadow-lg w-[400px]"
-              />
             </div>
             <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal3}>
