@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardHeader,
@@ -10,6 +10,8 @@ import {
 import FirstPricing from "../../public/assets/pricing/90dias.png";
 import SecondPricing from "../../public/assets/pricing/30D.png";
 import ThirdPricing from "../../public/assets/pricing/VEGETARIANO.png";
+import image30dias from "../../public/assets/pricing/image30dias.jpg";
+import plateVeggie from "../../public/assets/pricing/platoComidaVeggie.jpg";
 import Image from "next/image";
 
 const Pricing = () => {
@@ -23,6 +25,18 @@ const Pricing = () => {
   const closeModal2 = () => setIsOpen2(false);
   const openModal3 = () => setIsOpen3(true);
   const closeModal3 = () => setIsOpen3(false);
+
+  useEffect(() => {
+    if (isOpen1 || isOpen2 || isOpen3) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen1, isOpen2, isOpen3]);
 
   return (
     <div className="flex items-center justify-center mt-12 gap-4 flex-col md:flex-row">
@@ -186,10 +200,10 @@ const Pricing = () => {
       {/* Modal 1 */}
       {isOpen1 && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
-                Reserva tu plan 90 DIAS
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white z-10 flex justify-between items-center mb-4 pb-2 border-b border-gray-200">
+              <h3 className="text-2xl font-bold leading-6 text-green-400">
+                PLAN 90 DIAS
               </h3>
               <button
                 className="text-gray-500 hover:text-gray-700"
@@ -211,54 +225,71 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">Beneficios:</h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>Pérdida de grasa y medidas</li>
-                <li>Reducción de inflamación y antojos</li>
-                <li>Mayor energía, concentración y salud</li>
-                <li>Mejor digestión</li>
-                <li>Reducción de estreñimiento</li>
-                <li>Aprendizaje para cambio de hábitos</li>
-                <li>Técnicas para superar desafíos y mantener la motivación</li>
-                <li>Nuevo mindset y relación con la comida</li>
-                <li>
-                  Entrenar en casa o en el gym con una rutina adaptada a tus
-                  necesidades
-                </li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Beneficios:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>Pérdida de grasa y medidas</li>
+                    <li>Reducción de inflamación y antojos</li>
+                    <li>Mayor energía, concentración y salud</li>
+                    <li>Mejor digestión</li>
+                    <li>Reducción de estreñimiento</li>
+                    <li>Aprendizaje para cambio de hábitos</li>
+                    <li>
+                      Técnicas para superar desafíos y mantener la motivación
+                    </li>
+                    <li>Nuevo mindset y relación con la comida</li>
+                    <li>
+                      Entrenar en casa o en el gym con una rutina adaptada a tus
+                      necesidades
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    ¿Qué incluye?
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>Recetas y orientaciones nutricionales</li>
+                    <li>Rutinas para la casa o el gym</li>
+                    <li>
+                      Técnicas de mindset, adquisición de hábitos, técnicas de
+                      relajación y cambio de relación con la comida
+                    </li>
+                    <li>1 llamada semanal grupal</li>
+                    <li>Ingreso a la comunidad</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Entregables:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>
+                      Video de bienvenida con formulario para recuento de datos,
+                      medidas, fotos, etc.
+                    </li>
+                    <li>Guía de alimentación</li>
+                    <li>Recetas</li>
+                    <li>Rutinas</li>
+                    <li>Técnicas mindset y psicología del cambio</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                ¿Qué incluye?
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>Recetas y orientaciones nutricionales</li>
-                <li>Rutinas para la casa o el gym</li>
-                <li>
-                  Técnicas de mindset, adquisición de hábitos, técnicas de
-                  relajación y cambio de relación con la comida
-                </li>
-                <li>1 llamada semanal grupal</li>
-                <li>Ingreso a la comunidad</li>
-              </ul>
+            <div className="flex justify-center mt-4">
+              <Image
+                src={image30dias}
+                alt="Another Program"
+                className="rounded-lg shadow-lg w-[400px]"
+              />
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                Entregables:
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>
-                  Video de bienvenida con formulario para recuento de datos,
-                  medidas, fotos, etc.
-                </li>
-                <li>Guía de alimentación</li>
-                <li>Recetas</li>
-                <li>Rutinas</li>
-                <li>Técnicas mindset y psicología del cambio</li>
-              </ul>
-            </div>
-            <div className="mt-6 flex justify-evenly ">
+            <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal1}>
                 Cerrar
               </Button>
@@ -271,10 +302,10 @@ const Pricing = () => {
       {/* Modal 2 */}
       {isOpen2 && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
-                Reserva tu plan 30 DIAS
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white z-10 flex justify-between items-center mb-4 pb-2 border-b border-gray-200">
+              <h3 className="text-2xl font-bold leading-6 text-green-400">
+                PLAN 30 DIAS
               </h3>
               <button
                 className="text-gray-500 hover:text-gray-700"
@@ -296,48 +327,63 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">Beneficios:</h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>Pérdida de grasa y reducción de medidas en 30 días</li>
-                <li>
-                  Adquirir estrategias de cambio de hábitos y superar el primer
-                  desafío
-                </li>
-                <li>Adquirir actitud mental positiva</li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Beneficios:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>Pérdida de grasa y reducción de medidas en 30 días</li>
+                    <li>
+                      Adquirir estrategias de cambio de hábitos y superar el
+                      primer desafío
+                    </li>
+                    <li>Adquirir actitud mental positiva</li>
+                  </ul>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    ¿Qué incluye?
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>Recetas y orientaciones nutricionales</li>
+                    <li>Rutinas para la casa o el gym</li>
+                    <li>
+                      Técnicas de mindset, adquisición de hábitos, técnicas de
+                      relajación y cambio de relación con la comida
+                    </li>
+                    <li>1 llamada grupal semanal</li>
+                    <li>Ingreso a la comunidad</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Entregables:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>
+                      Video de bienvenida con formulario para recuento de datos,
+                      medidas, fotos, etc.
+                    </li>
+                    <li>Guía de alimentación</li>
+                    <li>Recetas</li>
+                    <li>Rutinas</li>
+                    <li>Técnicas mindset y psicología del cambio</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                ¿Qué incluye?
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>Recetas y orientaciones nutricionales</li>
-                <li>Rutinas para la casa o el gym</li>
-                <li>
-                  Técnicas de mindset, adquisición de hábitos, técnicas de
-                  relajación y cambio de relación con la comida
-                </li>
-                <li>1 llamada grupal semanal</li>
-                <li>Ingreso a la comunidad</li>
-              </ul>
+            <div className="flex justify-center mt-4">
+              <Image
+                src={image30dias}
+                alt="Another Program"
+                className="rounded-lg shadow-lg w-[400px]"
+              />
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                Entregables:
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>
-                  Video de bienvenida con formulario para recuento de datos,
-                  medidas, fotos, etc.
-                </li>
-                <li>Guía de alimentación</li>
-                <li>Recetas</li>
-                <li>Rutinas</li>
-                <li>Técnicas mindset y psicología del cambio</li>
-              </ul>
-            </div>
-            <div className="mt-6 flex justify-evenly ">
+            <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal2}>
                 Cerrar
               </Button>
@@ -349,10 +395,10 @@ const Pricing = () => {
 
       {isOpen3 && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
-                Reserva tu plan GUIA PARA EL VEGETARIANO
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white z-10 flex justify-between items-center mb-4 pb-2 border-b border-gray-200">
+              <h3 className="text-2xl font-bold leading-6 text-green-400">
+                GUIA PARA EL VEGETARIANO
               </h3>
               <button
                 className="text-gray-500 hover:text-gray-700"
@@ -374,41 +420,57 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">Beneficios:</h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>
-                  Aprender a calcular proteínas y nutrientes para equilibrar
-                  platos
-                </li>
-                <li>Recetario</li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Beneficios:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>
+                      Aprender a calcular proteínas y nutrientes para equilibrar
+                      platos
+                    </li>
+                    <li>Recetario</li>
+                  </ul>
+                </div>
+
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    ¿Qué incluye?
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>30 días de alimentación vegetariana</li>
+                    <li>Recetas y orientaciones nutricionales</li>
+                    <li>1 llamada grupal semanal</li>
+                    <li>Ingreso a la comunidad</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <div className="mt-4">
+                  <h4 className="text-md font-medium text-gray-900">
+                    Entregables:
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+                    <li>
+                      Video de bienvenida con formulario para recuento de datos,
+                      medidas, fotos, etc.
+                    </li>
+                    <li>Guía de alimentación</li>
+                    <li>Recetas</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                ¿Qué incluye?
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>30 días de alimentación vegetariana</li>
-                <li>Recetas y orientaciones nutricionales</li>
-                <li>1 llamada grupal semanal</li>
-                <li>Ingreso a la comunidad</li>
-              </ul>
+            <div className="flex justify-center mt-4">
+              <Image
+                src={plateVeggie}
+                alt="Another Program"
+                className="rounded-lg shadow-lg w-[400px]"
+              />
             </div>
-            <div className="mt-4">
-              <h4 className="text-md font-medium text-gray-900">
-                Entregables:
-              </h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
-                <li>
-                  Video de bienvenida con formulario para recuento de datos,
-                  medidas, fotos, etc.
-                </li>
-                <li>Guía de alimentación</li>
-                <li>Recetas</li>
-              </ul>
-            </div>
-            <div className="mt-6 flex justify-evenly ">
+            <div className="mt-6 flex justify-evenly">
               <Button color="green" onClick={closeModal3}>
                 Cerrar
               </Button>
