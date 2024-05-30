@@ -37,13 +37,14 @@ const Contact = () => {
   return (
     <div class="grid sm:grid-cols-2 items-center gap-16 my-6 mx-auto max-w-4xl bg-white text-[#333] font-[sans-serif] p-5 shadow-custom">
       <div>
-        <h1 class="text-3xl font-extrabold">Let's Talk</h1>
+        <h1 class="text-3xl font-extrabold">Hablemos</h1>
         <p class="text-sm text-gray-400 mt-3">
-          Have some big idea or brand to develop and need help? Then reach out
-          we'd love to hear about your project and provide help.
+          ¿Tienes una meta de salud o transformación física en mente y necesitas
+          ayuda? Contáctame, me encantaría saber sobre tu proyecto y ofrecerte
+          mi apoyo.
         </p>
         <div class="mt-12">
-          <h2 class="text-lg font-extrabold">Email</h2>
+          <h2 class="text-lg font-extrabold">Correo Electronico</h2>
           <ul class="mt-3">
             <li class="flex items-center">
               <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
@@ -62,13 +63,13 @@ const Contact = () => {
               </div>
               <a href="javascript:void(0)" class="text-[green] text-sm ml-3">
                 <small class="block">Mail</small>
-                <strong>info@example.com</strong>
+                <strong>lic.cintyamenendez@gmail.com</strong>
               </a>
             </li>
           </ul>
         </div>
         <div class="mt-12">
-          <h2 class="text-lg font-extrabold">Socials</h2>
+          <h2 class="text-lg font-extrabold">Redes Sociales</h2>
           <ul class="flex mt-3 space-x-4">
             <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
               <a href="javascript:void(0)">
@@ -77,31 +78,13 @@ const Contact = () => {
                   width="20px"
                   height="20px"
                   fill="green"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 16 16"
                 >
-                  <path
-                    d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                    data-original="#000000"
-                  />
+                  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                 </svg>
               </a>
             </li>
-            <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="javascript:void(0)">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20px"
-                  height="20px"
-                  fill="green"
-                  viewBox="0 0 511 512"
-                >
-                  <path
-                    d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                    data-original="#000000"
-                  />
-                </svg>
-              </a>
-            </li>
+
             <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
               <a href="javascript:void(0)">
                 <svg
@@ -124,7 +107,7 @@ const Contact = () => {
           name="user_name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
+          placeholder="Nombre"
           className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
         />
         <input
@@ -140,14 +123,14 @@ const Contact = () => {
           name="user_subject"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          placeholder="Subject"
+          placeholder="Asunto"
           className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[green]"
         />
         <textarea
           name="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message"
+          placeholder="Mensaje"
           rows="6"
           className="w-full rounded-md px-4 bg-gray-100 text-sm pt-3 outline-[green]"
         ></textarea>
