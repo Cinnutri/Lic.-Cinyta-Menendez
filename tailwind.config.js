@@ -16,6 +16,11 @@ module.exports = withMT({
       boxShadow: {
         custom: "0 0 20px rgba(0, 0, 0, 0.3)",
       },
+      screens: {
+        'xSmall': '360px', 
+        'medium': '768px',
+        'large': '1024px', 
+      },
     },
   },
   plugins: [],

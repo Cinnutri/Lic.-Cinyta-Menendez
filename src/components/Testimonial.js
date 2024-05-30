@@ -28,59 +28,58 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 2 >= testimonials.length ? 0 : prevIndex + 2
-    );
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? testimonials.length - (testimonials.length % 2 === 0 ? 2 : 1)
-        : prevIndex - 2
-    );
-  };
-
-  const visibleTestimonials = testimonials.slice(
-    currentIndex,
-    currentIndex + 2
-  );
   return (
-    <div className="flex flex-col items-center justify-center bg-green-500 p-4">
+    <div className="bg-green-500 p-4 flex flex-col items-center">
       <div className="my-4">
-        <p className="text-white text-4xl font-bold">
+        <p className="text-white text-4xl font-bold text-center">
           Testimonios de nuestros clientes
         </p>
       </div>
-      <div className="relative w-full flex items-center justify-center">
-        <button
-          onClick={handlePrev}
-          className="absolute left-0 text-white font-bold"
-        >
-          Anterior
-        </button>
-        <div className="flex flex-row gap-x-8 mx-8 mb-4">
-          {visibleTestimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center max-w-[700px] min-h-[400px] justify-between"
-            >
-              <p className="text-white text-center">{testimonial.text}</p>
-              <div className="mt-2 text-center">
-                <p className="text-white font-bold">{testimonial.name}</p>
-                <Image src={testimonial.image} alt={testimonial.name} />
-              </div>
-            </div>
-          ))}
-        </div>
-        <button
-          onClick={handleNext}
-          className="absolute right-0 text-white font-bold"
-        >
-          Siguiente
-        </button>
+      <div className="w-11/12 flex flex-col gap-y-8">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className={`
+            flex gap-4 p-4 bg-white rounded-md
+            medium:flex-row medium:items-center medium:justify-between
+            xSmall:flex-col xSmall:items-center xSmall:justify-between
+            `}
+          >
+            {index % 2 === 0 ? (
+              <>
+                <div className="flex flex-col items-center text-center medium:w-full">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={300}
+                    height={200}
+                    className=""
+                  />
+                </div>
+                <div className="flex flex-col items-center">
+                  <p className="text-gray-700 font-bold text-center">{testimonial.name}</p>
+                  <p className="text-gray-700 medium:w-8/12 text-center">{testimonial.text}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex flex-col items-center">
+                  <p className="text-gray-700 font-bold text-center">{testimonial.name}</p>
+                  <p className="text-gray-700 medium:w-8/12 text-center">{testimonial.text}</p>
+                </div>
+                <div className="flex flex-col items-center text-center medium:w-full">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={300}
+                    height={200}
+                    className=""
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
