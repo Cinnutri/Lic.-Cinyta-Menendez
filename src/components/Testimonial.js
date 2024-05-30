@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import tesimonial01 from "@../assets/testimonial/testimonial-01.jpg";
+import testimonialMatias from "@../assets/testimonial/testimonial-Matias.jpg"
 import tesimonial02 from "@../assets/testimonial/testimonial-02.jpg";
 import tesimonial03 from "@../assets/testimonial/testimonial-03.jpg";
 
 const testimonials = [
   {
-    text: "En marzo del 2023, me contacte con Cintya porque queria bajar de peso y se me estaba haciendo muy dificil lograrlo. Ella me armo un plan, en base a mis objetivos y actividades diarias, con el que estoy logrando ordenar mis hábitos alimenticios y cambiar mi calidad de vida. En este año de tratamiento he logrado bajar de peso, no solo por mi esfuerzo y compromiso, sino también, gracias al apoyo y guia de Cintya a nivel nutricional y personal",
-    name: "Rosana Bentancourt",
-    image: tesimonial01,
+    text: "Cintya en lo personal fuiste una gran ayuda en mi mejora, tu gran trabajo se noto físicamente y en los entrenamientos ya que aumente kilos de músculo y con eso aumente los pesos que podía mover, Con tus consultas me sentí muy cómodo por tu amabilidad y la gran atención que me has dado. Con respecto a la dieta, se me hizo fácil de seguir por tus indicaciones y la ayuda que me has dado. Las mejoras se notan claramente en las fotos que has tomado en las consultas y el como día a día podría mejorar las cargas",
+    name: "Matias de los Santos",
+    image: testimonialMatias,
   },
   {
     text: "La primera vez llegué a ella con el objetivo de incrementar la performance en mi entrenamiento de Crossfit, y la diferencia fue muy notoria, tanto en rendimiento, como en los cambios en mi cuerpo, acompañados de pérdida de peso con ganancia de masa muscular. Años después acudí a ella con el objetivo de ponerme en forma luego de un largo periodo de inactividad. A razón de pocos meses logramos un notorio aumento de masa muscular con pérdida de grasa y reducción de peso. También tuve la oportunidad de realizar un curso de Nutrición Deportiva, donde ella fue la docente y pude corroborar tanto sus grandes conocimientos, como su vocación para transmitirlos.",
