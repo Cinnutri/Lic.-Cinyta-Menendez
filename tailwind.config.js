@@ -17,9 +17,13 @@ module.exports = withMT({
         custom: "0 0 20px rgba(0, 0, 0, 0.3)",
       },
       screens: {
-        'xSmall': '360px', 
-        'medium': '768px',
-        'large': '1024px', 
+        xSmall: "360px",
+        medium: "768px",
+        large: "1024px",
+        xLarge: "1280px",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
