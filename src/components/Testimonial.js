@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import testimonialMatias from "@../assets/testimonial/testimonial-Matias.jpg";
 import tesimonialFabricio from "@../assets/testimonial/testimonial-Fabricio.jpg";
-import testimonialRbuia from "@../assets/testimonial/testimonial-Rubia.jpg";
+import testimonialNatalia from "@../assets/testimonial/testimonial-Rubia.jpg";
 
 const testimonials = [
   {
@@ -17,8 +17,8 @@ const testimonials = [
   },
   {
     text: "Quería contarte que venimos súper bien con el plan, al hacerlo en pareja se nos hizo más fácil, las sugerencias de comida nos parecen re sencillas de hacer y con poca elaboración que es lo que más estábamos buscando en nuestro caso por un tema de tiempos, venimos re contentos con los cambios y eso que nos damos nuestros permitidos a veces, empezamos hace poco pero ya lo re notamos, las fotos hablan por si solas y nosotros nos sentimos mucho mejor en cuanto a salud y cambios de habitos, poder tomar consciencia de lo que comemos es algo que nos ayudó a cambiar la mentalidad. Te queremos agradecer pila Por el apoyo y la motivación y esto recién empieza. Gracias gracias!",
-    name: "GERMAN Y ANA",
-    image: testimonialRbuia,
+    name: "NATALIA PENA",
+    image: testimonialNatalia,
   },
 ];
 
