@@ -12,7 +12,8 @@ const Footer = () => {
           <li>
             <Typography
               as="a"
-              href="#"
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=59892815557&text&type=phone_number&app_absent=0"
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
@@ -22,7 +23,8 @@ const Footer = () => {
           <li>
             <Typography
               as="a"
-              href="#"
+              href="https://www.instagram.com/cin.nutri/"
+              target="_blank"
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >

@@ -72,7 +72,10 @@ const Contact = () => {
           <h2 class="text-lg font-extrabold">Redes Sociales</h2>
           <ul class="flex mt-3 space-x-4">
             <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="javascript:void(0)">
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send/?phone=59892815557&text&type=phone_number&app_absent=0"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20px"
@@ -86,7 +89,7 @@ const Contact = () => {
             </li>
 
             <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-              <a href="javascript:void(0)">
+              <a target="_blank" href="https://www.instagram.com/cin.nutri/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20px"
