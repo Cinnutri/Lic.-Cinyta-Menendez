@@ -293,7 +293,15 @@ const Pricing = () => {
               <Button color="green" onClick={closeModal1}>
                 Cerrar
               </Button>
-              <Button color="green">Reservar</Button>
+              <Button
+                color="green"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.mercadopago.com.uy/checkout/v1/payment/redirect/e0224a1b-94dd-4a52-8ec2-b67f21cde504/payment-option-form/?source=link&preference-id=259592444-cf57d9d0-8f53-4eb8-94c9-a8fbeee46b2a&router-request-id=6ec2af8e-e86f-4f47-a3d3-048ce76957c7&initium=false&p=2d001c8f531c93c57ec3c943e3ee3acb#/")
+                }
+              >
+                Reservar
+              </Button>
             </div>
           </div>
         </div>
@@ -387,7 +395,15 @@ const Pricing = () => {
               <Button color="green" onClick={closeModal2}>
                 Cerrar
               </Button>
-              <Button color="green">Reservar</Button>
+              <Button
+                color="green"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.mercadopago.com.uy/checkout/v1/payment/redirect/82fddf69-943b-4fc6-a2d4-29de668a3c3a/payment-option-form/?source=link&preference-id=259592444-6492f75b-6645-4ead-ae6d-ba6c0a21a47c&router-request-id=2297d25d-83be-4878-a4d6-a4f61a12460e&initium=false&p=2d001c8f531c93c57ec3c943e3ee3acb#/")
+                }
+              >
+                Reservar
+              </Button>
             </div>
           </div>
         </div>
@@ -474,7 +490,15 @@ const Pricing = () => {
               <Button color="green" onClick={closeModal3}>
                 Cerrar
               </Button>
-              <Button color="green">Reservar</Button>
+              <Button
+                color="green"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.mercadopago.com.uy/checkout/v1/payment/redirect/0e6825b3-7e75-485c-b8a8-d68432b8bafa/payment-option-form/?source=link&preference-id=259592444-48c46221-635d-45b7-8b38-bc55692cd942&router-request-id=5af8728d-3bc2-40b4-a8ab-03cea0fb0730&initium=false&p=2d001c8f531c93c57ec3c943e3ee3acb#/")
+                }
+              >
+                Reservar
+              </Button>
             </div>
           </div>
         </div>
