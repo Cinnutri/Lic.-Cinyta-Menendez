@@ -81,8 +81,7 @@ const Pricing = () => {
             color="black"
             className="mt-6 flex justify-center gap-1 text-7xl font-normal"
           >
-            <span className="mt-2 text-4xl">$</span>29{" "}
-            <span className="self-end text-4xl">/mo</span>
+            <span className="mt-2 text-4xl">$</span>15000{" "}
           </Typography>
         </CardBody>
         <CardFooter className="pt-3">
@@ -136,8 +135,7 @@ const Pricing = () => {
             color="black"
             className="mt-6 flex justify-center gap-1 text-7xl font-normal"
           >
-            <span className="mt-2 text-4xl">$</span>39{" "}
-            <span className="self-end text-4xl">/mo</span>
+            <span className="mt-2 text-4xl">$</span>9500{" "}
           </Typography>
         </CardBody>
         <CardFooter className="pt-3">
@@ -186,8 +184,7 @@ const Pricing = () => {
             color="black"
             className="mt-6 flex justify-center gap-1 text-7xl font-normal"
           >
-            <span className="mt-2 text-4xl">$</span>39{" "}
-            <span className="self-end text-4xl">/mo</span>
+            <span className="mt-2 text-4xl">$</span>5000{" "}
           </Typography>
         </CardBody>
         <CardFooter className="pt-3">
